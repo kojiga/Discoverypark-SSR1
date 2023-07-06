@@ -1,0 +1,76 @@
+<div class="content">
+  <p>Today's tide times for BCS Park</p>
+  <table class="table">
+    <thead>
+      <th></th>
+      <th>Low Tide</th>
+      <th>High Tide</th>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>Morning</th>
+        <td scope="row">{{ time1 }}</td>
+        <td>{{ time2 }}</td>
+      </tr>
+
+      <tr>
+        <th>Evening</th>
+        <td scope="row">{{ time3 }}</td>
+        <td>{{ time4 }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+
+  <div class="input-field">
+    <div class="morning">
+      <h3>Morning</h3>
+      <label>Enter Time for lowtide</label>
+      <input
+        type="text"
+        [(ngModel)]="mlnewtime"
+        placeholder="Enter time 08:00 A.M."
+      />
+      <br />
+
+      <label>Enter Time for hightide</label>
+      <input
+        type="text"
+        [(ngModel)]="mhnewtime"
+        placeholder="Enter time 08:00 A.M."
+      />
+      <br /><br>
+    </div>
+
+    <div class="evening">
+      <h3>Evening</h3>
+      <label>Enter Time for lowtide</label>
+      <input
+        type="text"
+        [(ngModel)]="elnewtime"
+        placeholder="Enter time 08:00 A.M."
+      />
+      <br />
+
+      <label>Enter Time for hightide</label>
+      <input
+        type="text"
+        [(ngModel)]="ehnewtime"
+        placeholder="Enter time 08:00 A.M."
+      />
+    </div>
+  </div>
+
+  <div class="btn">
+    <button (click)="updateVariable()">Add</button>
+
+  </div>
+</div>
+
+
+
+
+
+

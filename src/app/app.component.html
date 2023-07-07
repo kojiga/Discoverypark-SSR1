@@ -1,33 +1,77 @@
-<div class="content">
-  <p>Today's tide times for BCS Park</p>
-  <table class="table">
-    <thead>
-      <th></th>
-      <th>Low Tide</th>
-      <th>High Tide</th>
-    </thead>
+<div class="all-content">
+  <div class="title-content">
+    <p>TIDE FORECAST - BCS PARK</p>
+    <!-- <p>Today's Tide Times for BCS Park</p> -->
+  </div>
 
-    <tbody>
-      <tr>
-        <th>Morning</th>
-        <td scope="row">{{ time1 }}</td>
-        <td>{{ time2 }}</td>
-      </tr>
+  <section class="articles">
+    <article>
+      <div class="article-wrapper">
+        <div class="article-body">
+          <h2>THE LIGHT-TOWERS</h2>
+          <p>
+            Experience pure magic at The Light-Towers. Witness a captivating
+            display of mesmerizing lights that will leave you in awe.
+          </p>
+        </div>
+      </div>
+    </article>
 
-      <tr>
-        <th>Evening</th>
-        <td scope="row">{{ time3 }}</td>
-        <td>{{ time4 }}</td>
-      </tr>
-    </tbody>
-  </table>
+    <article>
+      <div class="article-wrapper">
+        <div class="article-body">
+          <h2>Get {{ offer }}% Friday Offer</h2>
+          <p>
+            Enjoy the Ultimate Adventure at BCS Park: Get {{ offer }}% off on all Adventure
+            Passes! Discover Tranquility in the Heart of Nature
+          </p>
+        </div>
+      </div>
+    </article>
 
-  <br>
+    <article>
+      <div class="article-wrapper">
+        <div class="article-body">
+          <h2>PET FRIENDLY PARKS</h2>
+          <p>
+            A delightful oasis where you and your four-legged companion can
+            enjoy quality time together amidst nature's beauty.
+          </p>
+        </div>
+      </div>
+    </article>
+  </section>
 
+  <div class="table-content">
+    <p>Today's Tide Times for BCS Park</p>
+    <table class="table">
+      <thead>
+        <th></th>
+        <th>Low Tide</th>
+        <th>High Tide</th>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>Morning</th>
+          <td scope="row">{{ time1 }}</td>
+          <td>{{ time2 }}</td>
+        </tr>
+
+        <tr>
+          <th>Evening</th>
+          <td scope="row">{{ time3 }}</td>
+          <td>{{ time4 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <br />
   <div class="input-field">
     <div class="morning">
       <h3>Morning</h3>
-      <label>Enter Time for lowtide</label>
+      <label>Enter Time for Low Tide</label>
       <input
         type="text"
         [(ngModel)]="mlnewtime"
@@ -35,18 +79,18 @@
       />
       <br />
 
-      <label>Enter Time for hightide</label>
+      <label>Enter Time for High Tide</label>
       <input
         type="text"
         [(ngModel)]="mhnewtime"
         placeholder="Enter time 08:00 A.M."
       />
-      <br /><br>
+      <br /><br />
     </div>
 
     <div class="evening">
       <h3>Evening</h3>
-      <label>Enter Time for lowtide</label>
+      <label>Enter Time for Low Tide</label>
       <input
         type="text"
         [(ngModel)]="elnewtime"
@@ -54,23 +98,28 @@
       />
       <br />
 
-      <label>Enter Time for hightide</label>
+      <label>Enter Time for High Tide</label>
       <input
         type="text"
         [(ngModel)]="ehnewtime"
         placeholder="Enter time 08:00 A.M."
       />
+      <br /><br />
+    </div>
+
+    <div class="offer">
+      <h3>Offer</h3>
+      <label>Enter the Percentage of Offer</label>
+      <input
+        type="text"
+        [(ngModel)]="offerValue"
+        placeholder="Enter the percentage"
+      />
+      <br />
     </div>
   </div>
 
   <div class="btn">
-    <button (click)="updateVariable()">Add</button>
-
+    <button (click)="updateVariable()">Update</button>
   </div>
 </div>
-
-
-
-
-
-

@@ -9,19 +9,19 @@ import { OfferserviceService } from './Services/offerservice.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  mltime!: string;
-  mhtime!: string;
-  eltime!: string;
-  ehtime!: string;
-  offerVa!: string;
-  
+  mltime: string="9.00 A.M";
+  mhtime: string="9.00 A.M";
+  eltime: string="3.00 P.M";
+  ehtime: string="3.00 P.M";
+  offerVa: string="20";
+
   mlnewtime!: string;
   mhnewtime!: string;
   elnewtime!: string;
   ehnewtime!: string;
   offerValue!: string;
   responseData: any;
-  
+
   time1: any;
   time2: any;
   time3: any;
@@ -68,7 +68,7 @@ export class AppComponent implements OnInit {
       next: (ress) => {
         console.log(ress);
         this.res = ress[ress.length - 1];
-        
+
         const item1 = this.res.find((item: any) =>
           item.hasOwnProperty('mltime')
         );
@@ -78,12 +78,12 @@ export class AppComponent implements OnInit {
           item2.hasOwnProperty('mhtime')
         );
         this.time2 = item2 ? String(item2.mhtime) : '';
-        
+
         const item3 = this.res.find((item3: any) =>
           item3.hasOwnProperty('eltime')
         );
         this.time3 = item3 ? String(item3.eltime) : '';
-        
+
         const item4 = this.res.find((item4: any) =>
           item4.hasOwnProperty('ehtime')
         );
